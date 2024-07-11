@@ -1,7 +1,8 @@
 import { Request, Response } from "express";
 import TipoPet from "../tipos/TipoPet";
 
-let listaDePets: TipoPet[] = [];
+let listaDePets: Array<TipoPet> = [];
+// let listaDePets: TipoPet[] = [];
 
 export default class PetController {
     criaPet(req: Request, res: Response) {
