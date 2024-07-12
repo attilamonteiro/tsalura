@@ -1,13 +1,8 @@
-// src/app.ts
-import express from "express";
-import petRouter from "./routes/petRouter";
+import express, { Response } from "express";
+import router from "./routes";
 
 const app = express();
 app.use(express.json());
-app.use("/pets", petRouter);
-
-app.get("/", (_, res: express.Response) => {
-    res.send("Bem vindo ao curso de TypeScript!");
-});
+router(app);
 
 export default app;
